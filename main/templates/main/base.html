@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138316358-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138316358-1');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Death Squad</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/queries.css' %}">
+</head>
+<body>
+    <div class="nav">
+            <a class="squadmembers-link" href="#squadmembers">Squad Members</a>
+            <a class="aboutus-link" href="#aboutus">About Us</a>
+            <a class="joinsquad-link" href="#joinsquad">Join Squad</a>
+    </div>
+    <header>
+        <div class="blur"></div>
+        <div class="banner">
+            <img src="https://res.cloudinary.com/df76bsm6t/image/upload/v1555395700/DeathSquadlogo_kwpmnb.png" alt="deathsquad">
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div class="footer-area">
+            <h3>Developer: </h3>
+            <h4>Aman Varshney</h4>
+        </div>
+        <div class="footer-area">
+            <h3>Contact:</h3>
+            <h4>Drawscale@gmail.com</h4>
+        </div>
+        <div class="footer-area">
+            <h3>Made with: </h3>
+            <h4>Django</h4>
+        </div>
+        <div class="footer-area">
+            <h3>Hosted By: </h3>
+            <h4>Heroku</h4>
+        </div>
+    </footer>
+</body>
+</html>

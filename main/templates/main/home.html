@@ -1,0 +1,75 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <main>
+        <section id="squadmembers" class="container">
+            <div class="members">
+                <h1>Squad Members</h1>
+            </div>
+            <div class="borderline"></div>
+            {% for profile in profiles %}
+            <div class="profile">
+                <img src="{{ profile.photo }}" alt="profile image">
+                <h1 class="gamername">{{ profile.gamername }}</h1>
+                <hr>
+                <p class="name">Name: {{ profile.name }}</p>
+                <p class="player_id">ID: {{ profile.player_id }}</p>
+                <p class="level">Level: {{ profile.level }}</p>
+                <div class="player_profile">
+                    <a href="{{ profile.player_profile }}" target="_blank">Player Profile</a>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        <section id="aboutus" class="about-section">
+            <div class="aboutus-text">
+                <h1>ABOUT US</h1>
+            </div>
+            <div class="borderline"></div>
+            <div class="about-content">
+                <p>
+                    Official @DeathSquad
+                    <br>
+                    It's not a group of geeks, it's a religion. We push each other to get better. We are not a team bcs we work together but we are a team bcs we trust each other and have each other's back. We don't play, WE WIN!
+                </p>
+            </div>
+        </section>
+        <section id="joinsquad" class="join-section">
+            <div class="joinsquad-text">
+                <h1>Join Squad</h1>
+            </div>
+            <div class="borderline"></div>
+            <div class="forum">
+                <form method="post">
+                    <div class="box-input">
+                        <div class="label-input">
+                            <label>Gamer Name</label>
+                        </div>
+                        <div class="input-input">
+                            <input type="text" placeholder="eg: alphagun, warmachin3" required>
+                        </div>
+                    </div>
+                    <div class="box-input">
+                        <div class="label-input">
+                            <label>Full Name</label>
+                        </div>
+                        <div class="input-input">
+                            <input type="text" placeholder="eg: nikhil, aman" required>
+                        </div>
+                    </div>
+                    <div class="box-input">
+                        <div class="label-input">
+                            <label>ID</label>
+                        </div>
+                        <div class="input-input">
+                            <input type="number" placeholder="eg: 520488402" required>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="SUBMIT">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+{% endblock content %}
