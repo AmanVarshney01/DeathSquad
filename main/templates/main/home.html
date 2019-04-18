@@ -41,12 +41,13 @@
             <div class="borderline"></div>
             <div class="forum">
                 <form method="post">
+                    {% csrf_token %}
                     <div class="box-input">
                         <div class="label-input">
                             <label>Gamer Name</label>
                         </div>
                         <div class="input-input">
-                            <input type="text" placeholder="eg: alphagun, warmachin3" required>
+                            {{ form.gamername }}
                         </div>
                     </div>
                     <div class="box-input">
@@ -54,7 +55,7 @@
                             <label>Full Name</label>
                         </div>
                         <div class="input-input">
-                            <input type="text" placeholder="eg: nikhil, aman" required>
+                            {{ form.fullname }}
                         </div>
                     </div>
                     <div class="box-input">
@@ -62,7 +63,7 @@
                             <label>ID</label>
                         </div>
                         <div class="input-input">
-                            <input type="number" placeholder="eg: 520488402" required>
+                            {{ form.playerid }}
                         </div>
                     </div>
                     <div class="button">
